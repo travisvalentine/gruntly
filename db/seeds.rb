@@ -1,2 +1,1 @@
-zinn         = User.create(email: "mzinn7861@gmail.com", password: "Twilight2012")
-zinn_profile = Profile.create(user_id: zinn.id, first_name: "Michael", last_name: "Zinn", location: "Falls Church, VA" )
+zinn         = User.create(email: "mzinn7861@gmail.com", password: "Twilight2012", first_name: "Michael", last_name: "Zinn", location: "Falls Church, VA")

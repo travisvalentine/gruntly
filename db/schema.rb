@@ -14,19 +14,10 @@
 ActiveRecord::Schema.define(:version => 20130105033820) do
 
   create_table "activities", :force => true do |t|
-    t.integer  "profile_id"
+    t.integer  "user_id"
     t.string   "action"
     t.string   "distance"
     t.string   "day"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "profiles", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "location"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -53,6 +44,9 @@ ActiveRecord::Schema.define(:version => 20130105033820) do
   create_table "users", :force => true do |t|
     t.string   "email"
     t.string   "password_digest"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "location"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end

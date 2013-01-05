@@ -5,4 +5,8 @@ class Race < ActiveRecord::Base
 
   has_many :race_users
   has_many :users, through: :race_users
+
+  def location
+    "#{city}, #{state}" if city
+  end
 end

@@ -1,7 +1,7 @@
 class CreateActivities < ActiveRecord::Migration
   def change
     create_table :activities do |t|
-      t.integer :profile_id
+      t.integer :user_id
       t.string  :action
       t.string  :distance
       t.string  :day

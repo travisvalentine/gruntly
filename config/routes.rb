@@ -9,7 +9,6 @@ Gruntly::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :activities
-      resources :profiles
       resources :races, only: [:index, :show]
       resources :sessions
       resources :users
@@ -20,7 +19,6 @@ Gruntly::Application.routes.draw do
   match "/logout" => "sessions#destroy", :as => "logout"
 
   resources :activities
-  resources :profiles, only: [:new, :create, :edit, :update]
   resources :races, only: [:index, :show]
   resources :sessions
   resources :users, only: [:new, :create, :edit, :update, :destroy]

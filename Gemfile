@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.10'
 
+gem 'bootstrap-sass', '~> 2.2.2.0'
 gem 'nokogiri'
 gem 'sqlite3'
 
