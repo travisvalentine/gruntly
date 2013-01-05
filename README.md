@@ -1,4 +1,4 @@
 gruntly
 =======
 
-Running app
+App for runners.
