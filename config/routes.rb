@@ -19,7 +19,7 @@ Gruntly::Application.routes.draw do
   match "/logout" => "sessions#destroy", :as => "logout"
 
   resources :activities
-  resources :races, only: [:index, :show]
+  resources :races, only: [:new, :index, :show, :edit, :update, :destroy]
   resources :sessions
   resources :users
 end

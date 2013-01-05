@@ -1,3 +1,8 @@
+<% if current_user && current_user.is_admin? %>
+  <div class="alert">
+    <p id="add_link">You have permission to administer races in <%= link_to "the dashboard", admin_races_path %></p>
+  </div>
+<% end %>
 <table class="table table-hover">
   <thead>
     <tr>
