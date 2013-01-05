@@ -1,5 +1,5 @@
 class Race < ActiveRecord::Base
-  attr_accessible :controller, :races
+  attr_accessible :name, :city, :state, :date, :details
 
-  has_many :users, through: race_users
+  has_many :users, through: :race_users
 end

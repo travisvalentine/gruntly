@@ -41,10 +41,11 @@ ActiveRecord::Schema.define(:version => 20130105033820) do
 
   create_table "races", :force => true do |t|
     t.string   "name"
-    t.string   "races"
     t.string   "city"
     t.string   "state"
     t.date     "date"
+    t.text     "details"
+    t.string   "url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
