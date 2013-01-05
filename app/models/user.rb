@@ -12,4 +12,8 @@ class User < ActiveRecord::Base
     "#{first_name} #{last_name}"
   end
 
+  def is_admin?
+    role == "admin"
+  end
+
 end
