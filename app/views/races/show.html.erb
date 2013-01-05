@@ -1,1 +1,9 @@
-RACES SHOW
+<h4><%= @race.name %></h4>
+<p><%= @race.details %></p>
+<p><%= @race.location %></p>
+<p><%= @race.date %></p>
+
+<% if @race.users.any? %>
+  <h4>Runners</h4>
+  <%= render @race.users %>
+<% end %>
