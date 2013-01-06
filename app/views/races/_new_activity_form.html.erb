@@ -1,0 +1,10 @@
+<div>
+  <%= form_for Activity.new do |f| %>
+    I
+    <%= f.select :action, options_for_select(['ran', 'walked']), prompt: "ex. ran, walk" %>
+    <%= f.select :distance, 1..30, prompt: "ex. 5" %>
+    miles
+    <%= f.select :day, options_for_select(['today', 'yesterday']), prompt: "ex. today" %>
+    <%= f.submit "Add Activity", class: "btn btn-primary" %>
+  <% end %>
+</div>

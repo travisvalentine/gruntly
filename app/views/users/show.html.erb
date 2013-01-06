@@ -7,3 +7,10 @@
     <%= render partial: "race_users/race", collection: @user.races %>
   </ul>
 <% end %>
+
+<% if @user.activities.any? %>
+  <h4>Activity</h4>
+  <ul>
+    <%= render partial: "activities/activity", collection: @user.activities.reverse %>
+  </ul>
+<% end %>

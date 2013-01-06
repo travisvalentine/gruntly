@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
                   :first_name, :last_name, :location
   has_secure_password
 
+  has_many :activities
   has_many :race_users
   has_many :races, through: :race_users
 
