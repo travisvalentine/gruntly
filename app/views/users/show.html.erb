@@ -3,5 +3,7 @@
 
 <% if @user.races.any? %>
   <h4>Races</h4>
-  <%= render @user.races %>
+  <ul>
+    <%= render partial: "race_users/race", collection: @user.races %>
+  </ul>
 <% end %>

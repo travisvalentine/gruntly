@@ -20,6 +20,7 @@ Gruntly::Application.routes.draw do
 
   resources :activities
   resources :races, only: [:new, :index, :show, :edit, :update, :destroy]
+  resources :race_users, only: [:create, :destroy]
   resources :sessions
   resources :users
 end

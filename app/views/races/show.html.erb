@@ -1,3 +1,8 @@
+<% if current_user_is_running?(@race) %>
+  <%= link_to "You are running this race", "#", class: "btn btn-info" %>
+<% else %>
+  <%= button_to "Run this Race", race_users_path(race_id: @race.id), class: "btn btn-primary" %>
+<% end %>
 <h4><%= @race.name %></h4>
 <p><%= @race.details %></p>
 <p><%= @race.location %></p>
@@ -5,5 +10,7 @@
 
 <% if @race.users.any? %>
   <h4>Runners</h4>
-  <%= render @race.users %>
+  <ul>
+    <%= render partial: "race_users/user", collection: @race.users %>
+  </ul>
 <% end %>
