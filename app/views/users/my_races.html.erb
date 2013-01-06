@@ -1,0 +1,6 @@
+<% if current_user.races.any? %>
+  <h4>My Races</h4>
+  <ul>
+    <%= render partial: "race_users/race", collection: current_user.races %>
+  </ul>
+<% end %>

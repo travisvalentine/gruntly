@@ -18,6 +18,8 @@ Gruntly::Application.routes.draw do
   match "/login" => "sessions#new", :as => "login"
   match "/logout" => "sessions#destroy", :as => "logout"
 
+  get "my_races" => "users#my_races"
+
   resources :activities
   resources :races, only: [:new, :index, :show, :edit, :update, :destroy]
   resources :race_users, only: [:create, :destroy]
